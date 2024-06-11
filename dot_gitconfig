@@ -1,0 +1,11 @@
+[user]
+	name = Alex Way
+	email = alexwa@softcat.com
+[core]
+	excludesfile = ~/.gitignore_global
+[push]
+	default = current
+[init]
+	defaultbranch = main
+[pull]
+	rebase = true

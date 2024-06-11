@@ -1,0 +1,7 @@
+venv
+.venv
+secrets
+todo.md
+deploy_custom.sh
+docker-compose.customoverride.yml
+settings/custom.py
