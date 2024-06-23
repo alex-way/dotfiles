@@ -63,7 +63,11 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias ls='ls --color'
+if command -v eza &> /dev/null; then
+  alias ls='eza'
+else
+  alias ls='ls --color'
+fi
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:~/.local/bin"
