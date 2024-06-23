@@ -32,6 +32,12 @@ zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
 
+# Load autocompletions from brew installed tools
+fpath=(
+  /opt/homebrew/share/zsh/site-functions/
+  $fpath
+)
+
 autoload -U compinit && compinit
 
 zinit cdreplay -q
@@ -69,6 +75,18 @@ else
   alias ls='ls --color'
 fi
 
+alias vim='nvim'
+alias vi='nvim'
+alias sudo='sudo '
+alias brew_install_requirements='xargs brew install < ~/brew_requirements.txt'
+
+# Environment variables
+
+fpath=(
+  /opt/homebrew/share/zsh/site-functions
+  $fpath
+)
+
 export EDITOR=nvim
 export VISUAL="$EDITOR"
 export PATH="$PATH:/opt/nvim-linux64/bin"
@@ -76,3 +94,5 @@ export PATH="$PATH:~/.local/bin"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 . "$HOME/.cargo/env"
+
+
