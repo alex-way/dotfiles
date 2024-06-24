@@ -79,6 +79,17 @@ alias vim='nvim'
 alias vi='nvim'
 alias sudo='sudo '
 alias brew_install_requirements='xargs brew install < ~/brew_requirements.txt'
+alias gp='git push'
+alias gc='git commit -m'
+
+if command -v duf &> /dev/null; then
+  alias df='duf'
+fi
+
+
+if command -v btop &> /dev/null; then
+  alias top='btop'
+fi
 
 # Environment variables
 
@@ -91,6 +102,8 @@ export EDITOR=nvim
 export VISUAL="$EDITOR"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:~/.local/bin"
+export COREPACK_ENABLE_STRICT=0
+export COREPACK_ENABLE_AUTO_PIN=0
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 . "$HOME/.cargo/env"
