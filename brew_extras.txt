@@ -1,0 +1,10 @@
+corepack
+gleam
+k6
+mold
+nu
+pipx
+protobuf
+sccache
+tinygo-org/tools/tinygo
+tursodatabase/tap/turso

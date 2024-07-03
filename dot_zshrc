@@ -86,7 +86,6 @@ if command -v duf &> /dev/null; then
   alias df='duf'
 fi
 
-
 if command -v btop &> /dev/null; then
   alias top='btop'
 fi
@@ -101,18 +100,26 @@ fi
 
 # Environment variables
 
-fpath=(
-  /opt/homebrew/share/zsh/site-functions
-  $fpath
-)
-
 export EDITOR=nvim
 export VISUAL="$EDITOR"
-export PATH="$PATH:/opt/nvim-linux64/bin"
-export PATH="$PATH:~/.local/bin"
+
+export BUN_INSTALL="$HOME/.bun"
+export PYENV_ROOT="$HOME/.pyenv"
+
+export PATH='/opt/nvim-linux64/bin':$PATH
+export PATH="$HOME/.local/bin":$PATH
+export PATH='/home/linuxbrew/.linuxbrew/bin':$PATH
+export PATH='/usr/local/go/bin':$PATH
+export PATH=`go env GOPATH`/bin:$PATH
+export PATH="$HOME/.turso":$PATH
+export PATH="$BUN_INSTALL/bin":$PATH
+export PATH="$PYENV_ROOT/bin:$PATH"
+
 export COREPACK_ENABLE_STRICT=0
 export COREPACK_ENABLE_AUTO_PIN=0
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(pyenv init -)"
 
 . "$HOME/.cargo/env"
 
