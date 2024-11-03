@@ -3,6 +3,7 @@
 	email = alexwa@softcat.com
 [core]
 	excludesfile = ~/.gitignore_global
+	ignorecase = false
 [push]
 	default = current
 [init]
