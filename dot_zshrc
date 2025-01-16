@@ -75,24 +75,12 @@ else
   alias ls='ls --color'
 fi
 
-alias vim='nvim'
-alias vi='nvim'
-alias sudo='sudo '
+# alias vi='nvim'
+# alias sudo='sudo '
 alias brew_install_requirements='xargs brew install < ~/brew_requirements.txt'
 alias gp='git push'
 alias gc='git commit -m'
 
-if command -v duf &> /dev/null; then
-  alias df='duf'
-fi
-
-if command -v btop &> /dev/null; then
-  alias top='btop'
-fi
-
-if command -v bat &> /dev/null; then
-  alias cat='bat'
-fi
 
 if command -v rg &> /dev/null; then
   alias grep='rg'
@@ -104,25 +92,20 @@ export EDITOR=nvim
 export VISUAL="$EDITOR"
 
 export BUN_INSTALL="$HOME/.bun"
-export PYENV_ROOT="$HOME/.pyenv"
 export DENO_INSTALL="$HOME/.deno"
 
 export PATH='/opt/nvim-linux64/bin':$PATH
 export PATH="$HOME/.local/bin":$PATH
-export PATH="$PATH:$(pyenv root)/shims"
 export PATH='/home/linuxbrew/.linuxbrew/bin':$PATH
 export PATH='/usr/local/go/bin':$PATH
 export PATH=`go env GOPATH`/bin:$PATH
 export PATH="$HOME/.turso":$PATH
 export PATH="$BUN_INSTALL/bin":$PATH
-export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 export COREPACK_ENABLE_STRICT=0
 export COREPACK_ENABLE_AUTO_PIN=0
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-eval "$(pyenv init -)"
 
 . "$HOME/.cargo/env"
 
