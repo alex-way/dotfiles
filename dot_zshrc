@@ -102,6 +102,8 @@ export PATH=`go env GOPATH`/bin:$PATH
 export PATH="$HOME/.turso":$PATH
 export PATH="$BUN_INSTALL/bin":$PATH
 export PATH="$DENO_INSTALL/bin:$PATH"
+export PATH="$PATH:~/.porter"
+export PATH="$PATH:/opt/whalebrew/bin"
 
 export COREPACK_ENABLE_STRICT=0
 export COREPACK_ENABLE_AUTO_PIN=0
@@ -117,3 +119,4 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+export LANG=en_GB.UTF-8

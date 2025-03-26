@@ -1,0 +1,28 @@
+[user]
+	name = Alex Way
+	email = away@bell-integration.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGwtMb2Np6iT4aJIaTEbkpnBA7Ip5FVsLolPe91I6XIu
+[core]
+	excludesfile = ~/.gitignore_global
+	ignorecase = false
+
+[push]
+	default = current
+[init]
+	defaultbranch = main
+[pull]
+	rebase = true
+
+[includeIf "gitdir:~/code/p/"]
+    path = ~/code/p/.gitconfig_include
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
