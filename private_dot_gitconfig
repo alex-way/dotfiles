@@ -1,7 +1,7 @@
 [user]
 	name = Alex Way
-	email = away@bell-integration.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGwtMb2Np6iT4aJIaTEbkpnBA7Ip5FVsLolPe91I6XIu
+	email = way.alexander@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAPdZRV8Sw9iAcgLArnxufniThGwv8tpYN4/bKFsFMnl
 [core]
 	excludesfile = ~/.gitignore_global
 	ignorecase = false
