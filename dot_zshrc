@@ -80,7 +80,7 @@ fi
 alias brew_install_requirements='xargs brew install < ~/brew_requirements.txt'
 alias gp='git push'
 alias gc='git commit -m'
-
+alias python="python3"
 
 if command -v rg &> /dev/null; then
   alias grep='rg'
